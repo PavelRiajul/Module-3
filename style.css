@@ -1,16 +1,41 @@
-.box{
-  width: 100%;
-  height: 800px;
-  background-image: url(./image/./Screenshot-17.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
-  position: relative;
+.card{
+  width: 300px;
+  height: 300px;
+  border: px solid red;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -150px;
+  perspective: 600px;
 }
-.box1{
+.content{
   width: 100%;
   height: 100%;
   position: absolute;
-  background-color: aqua;
-  opacity: .4;
+  transition:transform 2s;
+  transform-style: preserve-3d;
+}
+.card:hover .content{
+  transform: rotateY(180deg);
+}
+.front,
+.back{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: aliceblue;
+  color: tomato;
+  backface-visibility: hidden;
+  font-size: 32px;
+  text-align: center;
+  line-height: 300px;
+  border-radius: 5px;
+
+}
+.back{
+  background-color: tomato;
+  color: #fff;
+  transform: rotatey(180deg);
+ 
+  
 }
