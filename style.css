@@ -1,74 +1,27 @@
-.section1{
-  width: 100%;
-  height: 100vh;
-  background-color: rgb(226, 218, 218);
+.button{
+  text-align: center;
+  margin-top: 200px;
 }
-.box1{
-width: 50%;
-height: 100%;
-background-color: aqua;
-float: left;
-animation-name: pavel;
-animation-duration: 2s;
-animation-delay: 2s;
-
-
-
-
+.class{
+  text-decoration: none;
+  background-color: blue;
+  display: inline-block;
+  padding: 20px 40px;
+  color: white;
+  position: relative;
+  z-index: 1;
 }
-@keyframes pavel{
-0%{
-  transform: translatex(-800px);
-}
-100%{
-  transform: translateX(0px);
-}
-}
-
-.box2{
-  width: 50%;
+.class::before{
+  content: '';
+  width: 0;
   height: 100%;
-  background-color: rgb(155, 127, 255);
-  float: right;
-  animation-name: rasel;
-animation-duration: 2s;
-animation-delay: 2s;
-
-
-
-
-
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: brown;
+  transition: 1s;
+  z-index: -1;
 }
-@keyframes rasel{
-  0%{
-    transform: translateX(800px);
-  }
-  100%{
-    transform: translateX(0px);
-  }
-}
-.box3{
-width: 700px;
-height: 800px;
-border: px solid red;
-background-image: url(./image/./project-3-280x300.jpg);
-animation-name: fahim;
-animation-duration: 2s;
-animation-delay: 4s;
-transition: transform 3s;
-visibility: hidden;
-
-
-}
-@keyframes fahim{
-0%{
-  transform: translatex(700px);
-  visibility: visible;
-  
-  
-}
-100%{
-  transform: translatex(0px);
-  visibility:visible;
-}
+.class:hover::before{
+  width: 100%;
 }
