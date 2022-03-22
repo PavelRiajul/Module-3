@@ -1,27 +1,41 @@
-.button{
-  text-align: center;
-  margin-top: 200px;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.class{
+body{
+  background-color: black;
+}
+ul{
+display: flex;
+position: relative;
+left: 600px;
+top: 100px;
+}
+ul li{
+list-style: none;
+margin-left: 40px;
+}
+ a{
   text-decoration: none;
-  background-color: blue;
-  display: inline-block;
-  padding: 20px 40px;
   color: white;
-  position: relative;
-  z-index: 1;
+  font-size: 30px;
+  font-weight: 700;
+  transition: .3s;
 }
-.class::before{
+ul li a:hover{
+  color: aqua;
+}
+a::after{
   content: '';
-  width: 0;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: brown;
-  transition: 1s;
-  z-index: -1;
+
+background-color: aqua;
+width: 0;
+height: 2px;
+display:block ;
+transition: .3s;
 }
-.class:hover::before{
+a:hover::after{
   width: 100%;
 }
